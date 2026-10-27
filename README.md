@@ -7,12 +7,13 @@ This project was built through a collaborative team effort featuring contributio
 * Sewa Omer
 * Muhamad
 * Saran
-* [Insert 4th Member Name]
+* Suhail
+* Mabast
 
 ## 💻 My Specific Contributions (Sewa Omer)
-* Developed core page layouts and integrated high-resolution destination image assets (`hawler.jpg`, `paris.jpg`, etc.) into subfolders.
-* Implemented responsive UI elements and structured cross-page navigation. 
-* Utilized AI tools to assist in writing and structuring clean, modular frontend code.
+* **Page Layout & Assets:** Developed core destination pages and managed high-resolution root assets (`hawler.jpg`, `paris2.jpg`, `moscow.jpg`, `tokyo.jpg`, etc.).
+* **Navigation & UI:** Structured the multi-page navigation header, curated visual destination cards, and ensured consistent cross-page styling.
+* **AI-Augmented Workflow:** Utilized AI tools to assist in generating responsive CSS flexbox layout templates, which I individually edited, verified, and integrated into the broader team codebase.
 
 ## 🛠️ Technologies Used
 * HTML5 & CSS3
