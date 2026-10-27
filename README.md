@@ -3,7 +3,7 @@
 A responsive multi-page travel guide web application developed collaboratively as a team project.
 
 ## 👥 Team Collaboration
-This project was built through a collaborative team effort featuring contributions from four team members:
+This project was built through a collaborative team effort featuring contributions from five team members:
 * Sewa Omer
 * Muhamad
 * Saran
