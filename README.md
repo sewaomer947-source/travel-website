@@ -3,19 +3,18 @@
 A responsive multi-page travel guide web application developed collaboratively as a team project.
 
 ## 👥 Team Collaboration
-This project was built through a collaborative team effort featuring contributions from:
+This project was built through a collaborative team effort featuring contributions from four team members:
 * Sewa Omer
 * Muhamad
 * Saran
-* [Insert 4th Team Member Name, if applicable]
+* [Insert 4th Member Name]
 
 ## 💻 My Specific Contributions (Sewa Omer)
-* Developed core page layouts and integrated high-resolution destination image assets (`hawler.jpg`, `paris.jpg`, etc.).
-* Implemented responsive UI elements and structured navigation across destination sections.
-* Utilized modern AI-augmented development workflows to streamline code structuring, debugging, and rapid prototyping.
+* Developed core page layouts and integrated high-resolution destination image assets (`hawler.jpg`, `paris.jpg`, etc.) into subfolders.
+* Implemented responsive UI elements and structured cross-page navigation. 
+* Utilized AI tools to assist in writing and structuring clean, modular frontend code.
 
 ## 🛠️ Technologies Used
 * HTML5 & CSS3
 * Responsive Web Design
 * Git & GitHub for Version Control
-* 
