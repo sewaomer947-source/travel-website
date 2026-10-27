@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f0f2f5;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        header {
+            position: relative;
+            height: 100vh;
+            width: 100%;
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)),
+                        url('https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+
+        /* Top Dropdown Simulation */
+        .top-selector {
+            position: absolute;
+            top: 40px;
+            background: white;
+            color: #333;
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: transform 0.2s;
+        }
+
+        .top-selector:hover {
+            transform: scale(1.05);
+        }
+
+        .top-selector span {
+            font-size: 0.9rem;
+        }
+
+        /* Hero Content */
+        .hero-badge {
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+            background: rgba(0,0,0,0.2);
+            backdrop-filter: blur(5px);
+        }
+
+        h1 {
+            font-size: 5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            text-shadow: 0 4px 8px rgba(0,0,0,0.5);
+            line-height: 1.1;
+        }
+
+        p.subtitle {
+            font-size: 1.5rem;
+            font-weight: 300;
+            margin-bottom: 40px;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .explore-btn {
+            background-color: #00a8ff;
+            color: white;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 15px rgba(0, 168, 255, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .explore-btn:hover {
+            background-color: #0097e6;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 168, 255, 0.6);
+        }
+
+        /* --- 3. CITY GRID SECTION --- */
+        .destinations {
+            padding: 80px 20px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: #7f8c8d;
+        }
+
+        /* Grid Layout */
+        .city-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        /* City Card */
+        .city-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: transform 0.3s;
+            position: relative;
+        }
+
+        .city-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .city-image {
+            height: 220px;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .city-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .city-info {
+            padding: 20px;
+        }
+
+        .city-name {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .city-desc {
+            font-size: 1rem;
+            color: #7f8c8d;
+            line-height: 1.5;
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 50px;
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 3.5rem; }
+            .explore-btn { padding: 12px 30px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="hero-badge">Travel Guide</div>
+        <h1>Wanderlust</h1>
+        <p class="subtitle">Discover the world's most amazing places</p>
+        <a href="#destinations" class="explore-btn">Explore Now</a>
+    </header>
+
+    <!-- CITY GRID SECTION -->
+    <section id="destinations" class="destinations">
+        <div class="section-title">
+            <h2>Best city to visit</h2>
+            <p>Explore with us</p>
+        </div>
+
+        <div class="city-grid">
+            <!-- 1. Erbil -->
+            <div class="city-card">
+                <div class="city-image">
+                   <a href="/Muhamad Page/erbil/erbil.html"><img src="hawler.jpg" alt="Erbil"></a>
+                </div>
+                <div class="city-info">
+                    <div class="city-name">Erbil </div>
+                    <p class="city-desc">One of the oldest continuously inhabited cities in the world, featuring the historic Citadel.</p>
+                </div>
+            </div>
+
+            <!-- 2. Paris -->
+            <div class="city-card">
+                <div class="city-image">
+                 <a href="/Muhamad Page/paris/paris/paris.html"> <img src="paris2.jpg" alt="Paris"></a>
+                </div>
+                <div class="city-info">
+                    <div class="city-name">Paris </div>
+                    <p class="city-desc">The city of lights, known for the Eiffel Tower, art museums, and charming cafes.</p>
+                </div>
+            </div>
+
+            <!-- 3. Istanbul -->
+            <div class="city-card">
+                <div class="city-image">
+                  <a href="/Mabast Page/Istanbul/Istanbul/istanbul.html"><img src="istanbul.jpg" alt="Istanbul"></a>
+                </div>
+                <div class="city-info">
+                    <div class="city-name">Istanbul </div>
+                    <p class="city-desc">A mesmerizing blend of East and West, famous for Hagia Sophia and the Bosphorus.</p>
+                </div>
+            </div>
+
+            <!-- 4. Tokyo -->
+            <div class="city-card">
+                <div class="city-image">
+                  <a href="/Mabast Page/Tokyo/Tokyo/tokyo.html"> <img src="tokyo.jpg" alt="Tokyo"></a>
+                </div>
+                <div class="city-info">
+                    <div class="city-name">Tokyo </div>
+                    <p class="city-desc">A neon-lit metropolis mixing ultramodern tech with traditional temples.</p>
+                </div>
+            </div>
+
+            <!-- 5. Seoul -->
+            <div class="city-card">
+                <div class="city-image">
+                  <a href="/suhel page/seoul/seoul.html"><img src="seol.jpg" alt="Seoul"></a>
+                </div>
+                <div class="city-info">
+                    <div class="city-name">Seoul </div>
+                    <p class="city-desc">A dynamic city where high-tech subways meet ancient palaces and street markets.</p>
+                </div>
+            </div>
+
+            <!-- 6. Lofoten Islands -->
+            <div class="city-card">
+                <div class="city-image">
+                   <a href="/suhel page/lofoten/lofoten.html"> <img src="lofoten island.jpg" alt="Lofoten"> </a>
+                </div>
+                <div class="city-info">
+                    <div class="city-name">Lofoten Islands</div>
+                    <p class="city-desc">Dramatic peaks, sheltered bays, and untouched nature in Norway.</p>
+                </div>
+            </div>
+
+            <!-- 7. Birmingham -->
+            <div class="city-card">
+                <div class="city-image">
+                    <a href="/suhel page/birmingham/birmingham.html"><img src="bermingham.jpg" alt="Birmingham"></a>
+                </div>
+                <div class="city-info">
+                    <div class="city-name">Birmingham </div>
+                    <p class="city-desc">A major city in England’s West Midlands with a rich industrial revolution history.</p>
+                </div>
+            </div>
+
+            <!-- 8. Glasgow -->
+            <div class="city-card">
+                <div class="city-image">
+                  <a href="/Mabast Page/Glasgow/Glasgow/glasgow.html"> <img src="glaskow.jpg" alt="Glasgow"></a>
+                </div>
+                <div class="city-info">
+                    <div class="city-name">Glasgow 3</div>
+                    <p class="city-desc">Scotland's cultural hub, known for Victorian architecture and a vibrant music scene.</p>
+                </div>
+            </div>
+
+            <!-- 9. Cairo -->
+            <div class="city-card">
+                <div class="city-image">
+                 <a href="/Saran Page/Cairo/Cairo.html">  <img src="cairo.jpg" alt="Cairo">  </a>
+                </div>
+                <div class="city-info">
+                    <div class="city-name">Cairo </div>
+                    <p class="city-desc">The sprawling capital of Egypt, set on the Nile, home to the Giza Pyramids.</p>
+                </div>
+            </div>
+
+            <!-- 10. Moscow -->
+            <div class="city-card">
+                <div class="city-image">
+                 <a href="/Saran Page/Moscow/moscow.html"> <img src="moscow.jpg" alt="Moscow"></a>
+                </div>
+                <div class="city-info">
+                    <div class="city-name">Moscow </div>
+                    <p class="city-desc">Russia’s cosmopolitan capital featuring the historic Red Square and colorful domes.</p>
+                </div>
+            </div>
+
+            <!-- 11. sao paulo -->
+            <div class="city-card">
+                <div class="city-image">
+                 <a href="/Saran Page/Sao paulo/Sao paulo.html"> <img src="sao paulo.jpg" alt="Sao Paulo"></a>
+                </div>
+                <div class="city-info">
+                    <div class="city-name">sao paulo </div>
+                    <p class="city-desc">Brazil’s vibrant megacity known for its towering skyline, diverse culture, and nonstop urban energy.</p>
+                </div>
+            </div>
+
+            <!-- 12. dubai -->
+            <div class="city-card">
+                <div class="city-image">
+                 <a href="/Saran Page/Dubai/Dubai.html">   <img src="dubai.jpg" alt="Dubai">  </a>
+                </div>
+                <div class="city-info">
+                    <div class="city-name">dubai </div>
+                    <p class="city-desc">The UAE’s futuristic metropolis famous for its soaring skyscrapers, luxury lifestyle, and stunning desert-meets-city views.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Prepared by Suhel, Mabast, Mohamad, Saran, and Sewa</p>
+    </footer>
+
+    <script>
+        function scrollToGrid() {
+            document.getElementById('destinations').scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
